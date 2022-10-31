@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: application-dev
   project: default
   source:
     repoURL: https://github.com/SmartMenuProj/manifests-tmp.git
