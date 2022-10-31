@@ -1,0 +1,20 @@
+piVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: services-dev
+  namespace: argo-cd
+spec:
+  destination:
+    name: in-cluster
+    namespace: webapps
+  project: default
+  source:
+    repoURL: https://github.com/SmartMenuProj/manifests-tmp.git
+    path: services/dev
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
