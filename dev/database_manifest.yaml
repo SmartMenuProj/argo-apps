@@ -5,7 +5,7 @@ metadata:
   namespace: argo-cd
 spec:
   destination:
-    name: gke_smartmenuqr_europe-west3-a_qr-gke
+    server: https://kubernetes.default.svc
     namespace: dev
   project: default
   source:
