@@ -6,11 +6,11 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: application-dev
+    namespace: admins-dev
   project: default
   source:
     repoURL: https://github.com/SmartMenuProj/manifests-tmp.git
-    path: services/dev
+    path: services/dev/admins
     targetRevision: HEAD
   syncPolicy:
     automated:

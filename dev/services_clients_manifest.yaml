@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: frontend-dev
-  namespace: argo-cd  
+  name: services-dev
+  namespace: argo-cd
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: application-dev
+    namespace: clients-dev
   project: default
   source:
     repoURL: https://github.com/SmartMenuProj/manifests-tmp.git
-    path: applications/dev/frontend
+    path: services/dev/clients
     targetRevision: HEAD
   syncPolicy:
     automated:
