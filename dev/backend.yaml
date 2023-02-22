@@ -3,9 +3,6 @@ kind: Application
 metadata:
   name: backend-dev
   namespace: argo-cd
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: backend=qrsmartmenu/backend
-    argocd-image-updater.argoproj.io/yourtool.update-strategy: latest
 spec:
   destination:
     server: https://kubernetes.default.svc
