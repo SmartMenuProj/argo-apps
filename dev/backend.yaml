@@ -3,6 +3,10 @@ kind: Application
 metadata:
   name: backend-dev
   namespace: argo-cd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: backend=qrsmartmenu/backend
+    argocd-image-updater.argoproj.io/backend.update-strategy: latest
+    argocd-image-updater.argoproj.io/backend.allow-tags: regexp:^0.1.0-[0-9a-zA-Z]+$
 spec:
   destination:
     server: https://kubernetes.default.svc
